@@ -8,11 +8,24 @@ class StaticController extends Controller
 {
     public function index()
     {
-        return view('index');
+        return view('client.index');
     }
 
     public function france()
     {
-        return view('france');
+        return view('client.france');
     }
+
+    public function international()
+    {
+        return view('client.international');
+    }
+
+    public function produit()
+    {
+        return view('client.produit');
+    }
+
+
+
 }

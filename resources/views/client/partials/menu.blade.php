@@ -1,30 +1,30 @@
 <nav class="navbar navbar-expand-lg navbar-light menuBack menuShadow">
-    <a class="navbar-brand" href="/gsb"><img src="./images/logo.png" style="height:70px;"/></a>
+    <a class="navbar-brand" href="{{ route('index') }}"><img src="./images/logo.png" style="height:70px;"/></a>
     <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="/gsb">Accueil <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href=""{{ route('index') }}"">Accueil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     Présentation
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/gsb?page=france">GSB France</a>
-                    <a class="dropdown-item" href="/gsb?page=international">GSB International</a>
+                    <a class="dropdown-item" href="{{ route('france') }}">GSB France</a>
+                    <a class="dropdown-item" href="{{ route('international') }}">GSB International</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/gsb?page=produits">Produits</a>
+                <a class="nav-link" href="{{ route('produit') }}">Produits</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/gsb?page=contact">Contact</a>
+                <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="mr-sm-2 inputSearch" type="search" placeholder="Produit" aria-label="Search">
             <button class="search" type="submit">Rechercher</button>
         </form>
-        <a class="icon" href="/gsb?page=connection">
+        <a class="icon" href="">
             <svg class="icon" viewBox="-42 0 512 512.001" xmlns="http://www.w3.org/2000/svg">
 
                 <path d="m210.351562 246.632812c33.882813 0 63.21875-12.152343 87.195313-36.128906 23.96875-23.972656 36.125-53.304687 36.125-87.191406 0-33.875-12.152344-63.210938-36.128906-87.191406-23.976563-23.96875-53.3125-36.121094-87.191407-36.121094-33.886718 0-63.21875 12.152344-87.191406 36.125s-36.128906 53.308594-36.128906 87.1875c0 33.886719 12.15625 63.222656 36.128906 87.195312 23.980469 23.96875 53.316406 36.125 87.191406 36.125zm-65.972656-189.292968c18.394532-18.394532 39.972656-27.335938 65.972656-27.335938 25.996094 0 47.578126 8.941406 65.976563 27.335938 18.394531 18.398437 27.339844 39.980468 27.339844 65.972656 0 26-8.945313 47.578125-27.339844 65.976562-18.398437 18.398438-39.980469 27.339844-65.976563 27.339844-25.992187 0-47.570312-8.945312-65.972656-27.339844-18.398437-18.394531-27.34375-39.976562-27.34375-65.976562 0-25.992188 8.945313-47.574219 27.34375-65.972656zm0 0"/>
