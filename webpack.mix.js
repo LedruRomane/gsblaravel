@@ -14,3 +14,19 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/css/client/app.scss', 'public/css/client.css')
     .sass('resources/css/admin/app.scss', 'public/css/admin.css');
+
+mix.browserSync({
+    host: '127.0.0.1',
+    proxy: process.env.APP_URL,
+    open: true,
+    files: [
+        'app/**/*.php',
+        'resources/views/**/*.php',
+        'public/js/*.js',
+        'public/css/*.css'
+    ],
+    watchOptions: {
+        usePolling: true,
+        interval: 500
+    }
+});

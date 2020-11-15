@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div id="international">
+    <div class="presentation">
         <header class="banniere">
             <h3 class="titre">GSB International</h3>
             <svg class="white_separator_bottom" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"

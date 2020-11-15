@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div id="produits">
+    <div id="produits" class="presentation">
         <header class="banniere">
             <h3 class="titre">Nos produits</h3>
             <svg class="white_separator_bottom" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
@@ -20,7 +20,7 @@
         </header>
 
         <div class="blocProduits">
-            <div class="nosProduits" id="n1">
+            <div class="nosProduits">
                 <img class="nosProduits-images" src="./images/produit.png">
                 <section>
                     <h6>DENTIFRICE SENSITIVE 50ML <br> ELMEX</h6>
@@ -30,7 +30,7 @@
                     <p class="ref">Référence : 8718951281813</p>
                 </section>
             </div>
-            <div class="nosProduits" id="n2">
+            <div class="nosProduits">
                 <img class="nosProduits-images" src="./images/produit.png">
                 <section>
                     <h6>DENTIFRICE SENSITIVE 50ML <br> ELMEX</h6>
@@ -40,7 +40,7 @@
                     <p class="ref">Référence : 8718951281813</p>
                 </section>
             </div>
-            <div class="nosProduits" id="n3">
+            <div class="nosProduits">
                 <img class="nosProduits-images" src="./images/produit.png">
                 <section>
                     <h6>DENTIFRICE SENSITIVE 50ML <br> ELMEX</h6>

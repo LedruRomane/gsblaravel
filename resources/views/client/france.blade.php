@@ -3,7 +3,7 @@
 @section('title', 'GSB en France')
 
 @section('content')
-    <div id="france">
+    <div class="presentation">
         <div class="content">
 
             <header class="banniere">
