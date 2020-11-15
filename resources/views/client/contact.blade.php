@@ -20,29 +20,38 @@
         </header>
 
         <div class="container">
-            <p class="text-left"><em>Notre formulaire de contact</em></p>
-            <div class="row test">
-                <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="name" name="Nom" placeholder="Nom" type="text" required>
+            <form method="post" action="{{ route('contact.submit') }}">
+                @csrf
+                <p class="text-left"><em>Notre formulaire de contact</em></p>
+                <div class="row test">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="name" name="name" placeholder="Nom" type="text" >
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="email" name="email" placeholder="Email" type="email" >
+                            </div>
                         </div>
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        <div>
+                            <input class="form-control" id="sujet" name="sujet" placeholder="Sujet" type="sujet" >
                         </div>
-                    </div>
-                    <div>
-                        <input class="form-control" id="sujet" name="sujet" placeholder="Sujet" type="sujet" required>
-                    </div>
-                    <textarea class="form-control" id="comments" name="comments" placeholder="Votre Message" rows="5"></textarea>
-                    <div class="row">
-                        <div class="col-md-12 form-group">
-                            <button class="btn send" style="background: #00AA66; color: white" type="submit"><strong>Envoyer</strong></button>
-                            <button class="btn reset" style="background: #777777; color: white" type="submit">Réinitialiser</button>
+                        <textarea class="form-control" id="comments" name="comments" placeholder="Votre Message" rows="5"></textarea>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <button class="btn send" style="background: #00AA66; color: white" type="submit"><strong>Envoyer</strong></button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                @error('name') <div class="alert alert-danger">{{ $message }}</div> @enderror
+                @error('email') <div class="alert alert-danger">{{ $message }}</div> @enderror
+                @error('sujet') <div class="alert alert-danger">{{ $message }}</div> @enderror
+                @error('comments') <div class="alert alert-danger">{{ $message }}</div> @enderror
+
+                @if(Session::has('success')) <div class="alert alert-success">{{ Session::get('success') }}</div> @endisset
+            </form>
         </div>
     </div>
 

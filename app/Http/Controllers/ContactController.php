@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
+use App\Notifications\ContactNotification;
+use Illuminate\Support\Facades\Notification;
 
 class ContactController extends Controller
 {
@@ -11,8 +13,13 @@ class ContactController extends Controller
         return view('client.contact');
     }
 
-    public function submit()
+    public function submit(ContactRequest $request)
     {
-        //todo
+        Notification::route('mail', env('MAIL_CONTACT'))
+            ->notify(new ContactNotification($request->all()));
+
+        return redirect()->back()->with([
+            'success' => 'Email envoyé! Nous vous répondrons dans les plus brefs délais.'
+        ]);
     }
 }
