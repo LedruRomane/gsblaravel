@@ -19,6 +19,7 @@ class FamilleController extends Controller
 
         return view('client.medicaments', [
             'famille' => $famille,
+            'user' => auth()->user()
         ]);
     }
 }

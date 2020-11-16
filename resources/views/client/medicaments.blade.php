@@ -28,9 +28,13 @@
                         <img class="nosProduits-images" src="{{ url('images/produit.png') }}">
                         <section>
                             <h6>{{ $medicament->nomCommercial }}</h6>
+                            @auth()
                             <p>{{ $medicament->composition }}</p>
-                            <p>{{ $medicament->effets }}</p>
-                            <p>{{ $medicament->contreIndications }}</p>
+                                @if($user->isPraticien())
+                                    <p>{{ $medicament->effets }}</p>
+                                    <p>{{ $medicament->contreIndications }}</p>
+                                @endif
+                            @endauth
                         </section>
                     </div>
                 @endforeach

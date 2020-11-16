@@ -15,8 +15,18 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::factory()->create([
-            'email' => 'test@gmail.com'
+            'email' => 'test@gmail.com',
+            'type' => User::_TYPE_PARTICULIER
         ]);
-        User::factory()->count(10)->create();
+        User::factory()->create([
+            'email' => 'test2@gmail.com',
+            'type' => User::_TYPE_PRATICIEN
+        ]);
+        User::factory([
+            'type' => User::_TYPE_PARTICULIER
+        ])->count(5)->create();
+        User::factory([
+            'type' => User::_TYPE_PRATICIEN
+        ])->count(5)->create();
     }
 }

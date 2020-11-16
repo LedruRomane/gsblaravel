@@ -8,7 +8,6 @@
             <a href="{{ route('familles.medicaments', ['famille' => $famille->id]) }}">
                 <p>{{ $famille->reference }} : {{ $famille->libelle }}</p>
             </a>
-
         @endforeach
     @endisset
 @endsection

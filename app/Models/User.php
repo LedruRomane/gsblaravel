@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -10,6 +9,9 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+
+    const _TYPE_PARTICULIER = 0;
+    const _TYPE_PRATICIEN = 1;
 
     /**
      * The attributes that are mass assignable.
@@ -40,4 +42,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function isPraticien()
+    {
+        return $this->type === self::_TYPE_PRATICIEN;
+    }
+
+    public function isParticulier()
+    {
+        return $this->type === self::_TYPE_PARTICULIER;
+    }
+
 }
