@@ -35,23 +35,23 @@
                 <path class="st0" d="M0,0v117c0,0,478.1-96,942.1-101S1800,77,1800,77V0H0z"/>
     </svg>
             <div class="boxes">
-                <div class="box1">
-                    <img class="imgProduit"src="{{ url('images/produit.png') }}" alt="médicament">
-                    <h4 class="titreProduit">Un médicament<br> ref = 8204 4402</h4>
-                    <p class="texteProduit">Ici la description du médicament en question, avec un peu de détails techniques: <br> Concentration : 8ch <br> Quantité : 8</p>
-                    <a class="voir" href="#">Voir</a>
-                </div>
-                <div class="box2">
-                    <img class="imgProduit" src="{{ url('images/produit.png') }}" alt="médicament">
-                    <h4 class="titreProduit">Un médicament <br> ref = 8204 4402</h4>
-                    <p class="texteProduit">Ici la description du médicament en question, avec un peu de détails techniques: <br> Concentration : 8ch <br> Quantité : 8</p>
-                    <a class="voir" href="#">Voir</a>
-                </div>
-                <div class="box3">
-                    <img class="imgProduit" src="{{ url('images/produit.png') }}" alt="médicament">
-                    <h4 class="titreProduit">Un médicament<br> ref = 8204 4402</h4>
-                    <p class="texteProduit">Ici la description du médicament en question, avec un peu de détails techniques: <br> Concentration : 8ch <br> Quantité : 8</p>
-                    <a class="voir" href="#">Voir</a>
+                <div class="blocProduits">
+
+                        @foreach($medicaments as $medicament)
+                            <div class="nosProduits">
+                                <img class="nosProduits-images" src="{{ url('images/produit.png') }}">
+                                <section>
+                                    <h6>{{ $medicament->nomCommercial }}</h6>
+                                    @auth()
+                                        <p>{{ $medicament->composition }}</p>
+                                        @if($user->isPraticien())
+                                            <p>{{ $medicament->effets }}</p>
+                                            <p>{{ $medicament->contreIndications }}</p>
+                                        @endif
+                                    @endauth
+                                </section>
+                            </div>
+                        @endforeach
                 </div>
             </div>
             <svg class="white_separator_bottom" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
