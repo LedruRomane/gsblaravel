@@ -22,7 +22,7 @@
         <div class="content">
             <h2 class="titreBlack">GSB à l'international c'est aussi : </h2>
             <div class="info">
-                <img class="image" src="./images/International.png" width="1300">
+                <img class="image" src="{{ url('images/International.png') }}" width="1300">
                 <div class="repartition">
                     <p>Localisation Siège social : Philadelphie, Pennsylvanie, Etats-Unis.</p>
                 </div>

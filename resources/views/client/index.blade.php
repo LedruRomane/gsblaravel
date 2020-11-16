@@ -19,7 +19,7 @@
                 <a class="plus" href="{{ route('france') }}">En savoir plus</a>
             </div>
             <div class="image">
-                <img src="./images/notreLab.jpg" alt="Notre laboratoire">
+                <img src="{{ url('images/notreLab.jpg') }}" alt="Notre laboratoire">
             </div>
         </div>
 
@@ -36,19 +36,19 @@
     </svg>
             <div class="boxes">
                 <div class="box1">
-                    <img class="imgProduit"src="./images/produit.png" alt="médicament">
+                    <img class="imgProduit"src="{{ url('images/produit.png') }}" alt="médicament">
                     <h4 class="titreProduit">Un médicament<br> ref = 8204 4402</h4>
                     <p class="texteProduit">Ici la description du médicament en question, avec un peu de détails techniques: <br> Concentration : 8ch <br> Quantité : 8</p>
                     <a class="voir" href="#">Voir</a>
                 </div>
                 <div class="box2">
-                    <img class="imgProduit" src="./images/produit.png" alt="médicament">
+                    <img class="imgProduit" src="{{ url('images/produit.png') }}" alt="médicament">
                     <h4 class="titreProduit">Un médicament <br> ref = 8204 4402</h4>
                     <p class="texteProduit">Ici la description du médicament en question, avec un peu de détails techniques: <br> Concentration : 8ch <br> Quantité : 8</p>
                     <a class="voir" href="#">Voir</a>
                 </div>
                 <div class="box3">
-                    <img class="imgProduit" src="./images/produit.png" alt="médicament">
+                    <img class="imgProduit" src="{{ url('images/produit.png') }}" alt="médicament">
                     <h4 class="titreProduit">Un médicament<br> ref = 8204 4402</h4>
                     <p class="texteProduit">Ici la description du médicament en question, avec un peu de détails techniques: <br> Concentration : 8ch <br> Quantité : 8</p>
                     <a class="voir" href="#">Voir</a>

@@ -20,12 +20,4 @@ class StaticController extends Controller
     {
         return view('client.international');
     }
-
-    public function produit()
-    {
-        return view('client.produit');
-    }
-
-
-
 }

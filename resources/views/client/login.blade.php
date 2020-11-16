@@ -21,6 +21,10 @@
                         <button class="btn send" style="background: #00AA66; color: white" type="submit"><strong>Se connecter</strong></button>
                     </div>
                 </div>
+                <div class="row">
+                    @error('email') <div class="alert alert-danger">{{ $message }}</div> @enderror
+                    @error('password') <div class="alert alert-danger">{{ $message }}</div> @enderror
+                </div>
             </div>
         </div>
     </form>

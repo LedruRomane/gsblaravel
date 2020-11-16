@@ -17,10 +17,13 @@ Route::get('/', [\App\Http\Controllers\StaticController::class, 'index'])->name(
 
 Route::get('/france', [\App\Http\Controllers\StaticController::class, 'france'])->name('france');
 
-Route::get('/international', [\App\Http\Controllers\StaticController::class,'international'])->name('international');
+Route::get('/international', [\App\Http\Controllers\StaticController::class, 'international'])->name('international');
 
-Route::get('/produit', [\App\Http\Controllers\StaticController::class,'produit'])->name('produit');
+Route::prefix('familles')->name('familles.')->group(function () {
+    Route::get('/', [\App\Http\Controllers\FamilleController::class, 'index'])->name('index');
+    Route::get('{famille}/medicaments', [\App\Http\Controllers\FamilleController::class, 'medicaments'])->name('medicaments');
+});
 
-Route::get('/contact',[\App\Http\Controllers\ContactController::class,'index'])->name('contact.index');
-Route::post('/contact',[\App\Http\Controllers\ContactController::class,'submit'])->name('contact.submit');
+Route::get('/contact',[\App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
+Route::post('/contact',[\App\Http\Controllers\ContactController::class, 'submit'])->name('contact.submit');
 

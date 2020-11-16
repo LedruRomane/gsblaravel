@@ -21,12 +21,12 @@
             </header>
 
             <div class="info">
-                <img class="image" src="./images/ChiffresClés.png" width="1300">
+                <img class="image" src="{{ url('images/ChiffresClés.png') }}" width="1300">
                 <div class="repartition">
                     <p>La répartition des Secteurs est découpée en 6 secteurs géographiques : nord, sud, est, ouest, Paris centre et DTOM (Caraïbes-Amériques et Asie-Afrique).<br><br> Les secteurs sont découpés en zones géographiques puis en secteurs régionaux. Dans chaque secteur il y existe une hiérarchie avec un responsable d’un secteur (ex : Nord) avec des délégués assignés par région (ex : Normandie). <br><br> Les visiteurs médicaux sont encadrés par des délégués (leur supérieur direct) qui lui-même est encadré par le Responsable de secteur.</p>
-                    <img src="./images/carte.jpg">
+                    <img src="{{ url('images/carte.jpg') }}">
                 </div>
-                <img class="image" id="hierarchieImage" src="./images/HierarchieSecteur.png" width="1300">
+                <img class="image" id="hierarchieImage" src="{{ url('images/HierarchieSecteur.png') }}" width="1300">
             </div>
         </div>
     </div>
