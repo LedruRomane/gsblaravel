@@ -126,9 +126,9 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! G:\wamp\www\gsblaravel\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! G:\wamp\www\gsblaravel\resources\css\client\app.scss */"./resources/css/client/app.scss");
-module.exports = __webpack_require__(/*! G:\wamp\www\gsblaravel\resources\css\admin\app.scss */"./resources/css/admin/app.scss");
+__webpack_require__(/*! D:\wamp64\www\gsblaravel\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\wamp64\www\gsblaravel\resources\css\client\app.scss */"./resources/css/client/app.scss");
+module.exports = __webpack_require__(/*! D:\wamp64\www\gsblaravel\resources\css\admin\app.scss */"./resources/css/admin/app.scss");
 
 
 /***/ })

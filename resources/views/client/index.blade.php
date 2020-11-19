@@ -27,43 +27,41 @@
             <svg class="white_separator" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
                  x="0px" y="0px" width="100%" viewBox="0 0 1800 117"
                  style="overflow:scroll;enable-background:new 0 0 1800 117;" xml:space="preserve">
-      <style type="text/css">
-          .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#ffffff;}
-      </style>
+                  <style type="text/css">
+                      .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#ffffff;}
+                  </style>
                 <defs>
                 </defs>
                 <path class="st0" d="M0,0v117c0,0,478.1-96,942.1-101S1800,77,1800,77V0H0z"/>
-    </svg>
-            <div class="boxes">
-                <div class="blocProduits">
-
-                        @foreach($medicaments as $medicament)
-                            <div class="nosProduits">
-                                <img class="nosProduits-images" src="{{ url('images/produit.png') }}">
-                                <section>
-                                    <h6>{{ $medicament->nomCommercial }}</h6>
-                                    @auth()
-                                        <p>{{ $medicament->composition }}</p>
-                                        @if($user->isPraticien())
-                                            <p>{{ $medicament->effets }}</p>
-                                            <p>{{ $medicament->contreIndications }}</p>
-                                        @endif
-                                    @endauth
-                                </section>
-                            </div>
-                        @endforeach
+            </svg>
+            <div style="height:7%;"></div>
+            <div class="card-deck">
+                @foreach($medicaments as $medicament)
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ url('images/produit.png') }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $medicament->nomCommercial }}</h5>
+                        @auth()
+                        <p class="card-text">{{ $medicament->composition }}</p>
+                            @if($user->isPraticien())
+                            <p class="card-text">{{ $medicament->composition }}</p>
+                            @endif
+                        @endauth
+                        <a href="{{route('familles.index')}}" class="btn btn-primary">Voir</a>
+                    </div>
                 </div>
+                @endforeach
             </div>
             <svg class="white_separator_bottom" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
                  x="0px" y="0px" width="100%" viewBox="0 0 1800 117"
                  style="overflow:scroll;enable-background:new 0 0 1800 117;" xml:space="preserve">
-      <style type="text/css">
-          .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#ffffff;}
-      </style>
-                <defs>
-                </defs>
-                <path class="st0" d="M0,0v117c0,0,478.1-96,942.1-101S1800,77,1800,77V0H0z"/>
-    </svg>
+              <style type="text/css">
+                  .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#ffffff;}
+              </style>
+                        <defs>
+                        </defs>
+                        <path class="st0" d="M0,0v117c0,0,478.1-96,942.1-101S1800,77,1800,77V0H0z"/>
+            </svg>
         </div>
 
         <div class="Objectif">
