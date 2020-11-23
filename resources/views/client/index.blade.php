@@ -34,7 +34,6 @@
                 </defs>
                 <path class="st0" d="M0,0v117c0,0,478.1-96,942.1-101S1800,77,1800,77V0H0z"/>
             </svg>
-            <div style="height:7%;"></div>
             <div class="card-deck">
                 @foreach($medicaments as $medicament)
                 <div class="card" style="width: 18rem;">
@@ -63,7 +62,6 @@
                         <path class="st0" d="M0,0v117c0,0,478.1-96,942.1-101S1800,77,1800,77V0H0z"/>
             </svg>
         </div>
-
         <div class="Objectif">
             <div class="title_obj">
                 <h2>Nos objectifs</h2>
