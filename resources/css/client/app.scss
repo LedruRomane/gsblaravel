@@ -173,7 +173,12 @@ body{
 .presentation .container{
     margin-bottom:2%;
 }
-
-
+.familleCard{
+    display:flex;
+    flex-wrap: wrap;
+}
+.familleCard .card{
+    margin:3%;
+}
 @import "./partials/footer";
 @import "./partials/menu";

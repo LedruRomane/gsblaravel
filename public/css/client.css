@@ -199,6 +199,15 @@ body {
   margin-bottom: 2%;
 }
 
+.familleCard {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.familleCard .card {
+  margin: 3%;
+}
+
 .bloc-footer {
   background-color: #0b586d;
   height: 280px;

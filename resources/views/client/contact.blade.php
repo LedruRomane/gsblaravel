@@ -52,6 +52,8 @@
 
                 @if(Session::has('success')) <div class="alert alert-success">{{ Session::get('success') }}</div> @endisset
             </form>
+            <p class="text-left"><em>Nous localiser: </em></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5565.256401908058!2d3.090211829638951!3d45.77864096103566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f71be0d48c817f%3A0x79256a96fbdd5938!2sLyc%C3%A9e%20Technique%20Sidoine%20Apollinaire!5e0!3m2!1sfr!2sfr!4v1607354889043!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </div>
 

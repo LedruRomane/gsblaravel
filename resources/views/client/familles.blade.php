@@ -4,10 +4,17 @@
 
 @section('content')
     @isset($familles)
-        @foreach($familles as $famille)
-            <a href="{{ route('familles.medicaments', ['famille' => $famille->id]) }}">
-                <p>{{ $famille->reference }} : {{ $famille->libelle }}</p>
-            </a>
-        @endforeach
+        <div class="familleCard">
+            @foreach($familles as $famille)
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $famille->libelle }}</h5>
+                        <p class="card-text">Référence de famille : {{ $famille->reference }}</p>
+                        <a href="{{ route('familles.medicaments', ['famille' => $famille->id]) }}" class="btn btn-primary">Voir</a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
     @endisset
 @endsection

@@ -46,7 +46,7 @@
                             <p class="card-text">{{ $medicament->composition }}</p>
                             @endif
                         @endauth
-                        <a href="{{route('familles.index')}}" class="btn btn-primary">Voir</a>
+                        <a href="{{ route('familles.medicaments', [$medicament->idFamille]) }}" class="btn btn-primary">Voir</a>
                     </div>
                 </div>
                 @endforeach
