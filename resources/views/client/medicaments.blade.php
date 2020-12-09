@@ -19,25 +19,25 @@
             </svg>
         </header>
 
-        <h5>Famille : {{ $famille->libelle }} (ref: {{ $famille->reference }})</h5>
-
-        <div class="blocProduits">
+        <h5 style="margin-left:8%; font-weight: bold;">{{ $famille->libelle }} (ref: {{ $famille->reference }})</h5>
+        <div class="familleCard">
             @foreach($famille->medicaments->chunk(3) as $chunk)
                 @foreach($chunk as $medicament)
-                    <div class="nosProduits">
-                        <img class="nosProduits-images" src="{{ url('images/produit.png') }}">
-                        <section>
-                            <h6>{{ $medicament->nomCommercial }}</h6>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src= "{{ url('images/medicaments/' . $medicament->getKey() . ".jpg") }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $medicament->nomCommercial }}</h5>
                             @auth()
-                            <p>{{ $medicament->composition }}</p>
+                                <p class="card-text">{{ $medicament->composition }}</p>
                                 @if($user->isPraticien())
-                                    <p>{{ $medicament->effets }}</p>
-                                    <p>{{ $medicament->contreIndications }}</p>
+                                    <p class="card-text">{{ $medicament->effets }}</p>
+                                    <p class="card-text">{{ $medicament->contreIndications }}</p>
                                 @endif
                             @endauth
-                        </section>
+                        </div>
                     </div>
                 @endforeach
+
             @endforeach
         </div>
     </div>

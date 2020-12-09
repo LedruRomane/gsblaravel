@@ -7,7 +7,7 @@
         <div class="familleCard">
             @foreach($familles as $famille)
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <img class="card-img-top" src= "{{ url("images/familles/" . $famille->getKey(). ".jpg")}}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{ $famille->libelle }}</h5>
                         <p class="card-text">Référence de famille : {{ $famille->reference }}</p>
