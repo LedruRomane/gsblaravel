@@ -336,4 +336,7 @@ button.search:hover {
 .inputSearch:focus {
   outline: none !important;
 }
+#accueil .card{
+    margin:6%;
+}
 
