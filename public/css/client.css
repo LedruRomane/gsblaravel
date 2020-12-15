@@ -92,6 +92,29 @@ body {
 #accueil .title_obj h2 {
   font-weight: bold !important;
 }
+@media screen and (max-width:992px){
+    .navbar form{
+        display: none;
+    }
+    .activity{
+        display:block;
+    }
+    #accueil .image{
+        margin-left: 20%;
+        margin-top:2%;
+        margin-right: 14%!important;
+        box-shadow: none!important;
+    }
+    #accueil .image img{
+        box-shadow: 10px 10px 20px #555555;
+    }
+    .navbar-nav{
+        flex-direction: row!important;
+    }
+    #accueil .bloc_header{
+        margin-top: -150px;
+    }
+}
 
 /*produits*/
 
@@ -335,8 +358,5 @@ button.search:hover {
 
 .inputSearch:focus {
   outline: none !important;
-}
-#accueil .card{
-    margin:6%;
 }
 

@@ -19,11 +19,11 @@
             </svg>
         </header>
 
-        <h5 style="margin-left:8%; font-weight: bold;">{{ $famille->libelle }} (ref: {{ $famille->reference }})</h5>
+        <h5 style="margin-left:8%; font-weight: bold;margin-top:2%;">{{ $famille->libelle }} (ref: {{ $famille->reference }})</h5>
         <div class="familleCard">
             @foreach($famille->medicaments->chunk(3) as $chunk)
                 @foreach($chunk as $medicament)
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem; box-shadow: 2px 2px 20px grey; margin:5%;">
                         <img class="card-img-top" src= "{{ url('images/medicaments/' . $medicament->getKey() . ".jpg") }}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{ $medicament->nomCommercial }}</h5>
