@@ -15,13 +15,13 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::factory()->create([
-            'email' => 'test@gmail.com',
-            'password' => bcrypt('toto'),
+            'email' => 'particulier@gmail.com',
+            'password' => bcrypt('particulier'),
             'type' => User::_TYPE_PARTICULIER
         ]);
         User::factory()->create([
-            'email' => 'test2@gmail.com',
-            'password' => bcrypt('toto2'),
+            'email' => 'praticien@gmail.com',
+            'password' => bcrypt('praticien'),
             'type' => User::_TYPE_PRATICIEN
         ]);
         User::factory([
